@@ -8,7 +8,8 @@ const ALLOWED_HOSTS = [
     // The domain to load markdown files
     location.host,
     // The domain to load docute
-    'unpkg.com'
+    'unpkg.com',
+    'github.com'
 ]
 
 const matchCb = ({ url, event }) => {

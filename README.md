@@ -8,6 +8,12 @@ The guide contains tutorials on:
 - Configuration using `config-utils` (and alternative manual configuration) 
 - UI using `questui` and **or** `QUCv2`
 
+## Explore
+
+Checkout the [Getting Started](/gs/) guide if you want to learn how to make mods.
+
+Already made a mod? Want to utilise libraries such as `config-utils` and `quest-ui`? Checkout the [Further Modding](/fm/) guide for more infomation.
+
 ## Contributing
 
 Contributing is easy, fork, write and pull request - there are few checklists you should follow to make sure the content you want to add is suitable and is correctly formatted.
@@ -32,9 +38,11 @@ Contributing is easy, fork, write and pull request - there are few checklists yo
 
 ## Contributors
 
-These amazing people contributed:
+These people have contributed to the guide:
 
-
+<a href="https://github.com/cal117/bsqmg/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cal117/bsqmg"  alt="contributors"/>
+</a>
 
 
 

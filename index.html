@@ -32,6 +32,10 @@
             transform: scale(1.05);
         }
 
+        .LanguageSelector {
+            display: none;
+        }
+
     </style>
 
 </head>
@@ -74,10 +78,19 @@
                 ]
             }
         ],
+        overrides: {
+            // '/1.19.0': {
+            //     sourcePath: 'https://raw.githubusercontent.com/cal117/bsqmg/v1190'
+            // }
+        },
         versions: {
-            'Latest': {
+            'Latest (1.19.0)': {
                 link: '/'
-            }
+            }/*,
+             '1.19.0': {
+                 link: '/1.19.0'
+             }
+             */
         }
     })
 </script>
