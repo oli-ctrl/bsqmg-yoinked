@@ -50,7 +50,7 @@
     new Docute({
         target: '#docute',
         layout: 'wide',
-        highlight: ["cpp", "cmake", "powershell"],
+        highlight: ["cpp", "cmake", "powershell", "bash"],
         theme: "dark",
         banner: `This guide is a work in progress. It may be incomplete.`,
         darkThemeToggler: true,
@@ -59,6 +59,20 @@
             {
                 title: 'Guide Infomation',
                 link: '/'
+            },
+            {
+                title: 'Getting Started',
+                // link: '/gs/',
+                children: [
+                    {
+                        title: 'Information',
+                        link: "/gs/"
+                    },
+                    {
+                        title: 'Creating a project',
+                        link: '/gs/creating_a_project'
+                    },
+                ]
             },
             {
                 title: 'Links',
