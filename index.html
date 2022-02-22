@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BSQ Modding Guide</title>
+    <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .docute-banner {
+            background-color: orange;
+            color: black;
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid darkorange;
+            transition: transform .2s;
+
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .docute-banner:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="docute"></div>
+<script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+    }
+
+    new Docute({
+        target: '#docute',
+        layout: 'wide',
+        highlight: ["cpp", "cmake", "powershell"],
+        theme: "dark",
+        banner: `This guide is a work in progress. It may be incomplete.`,
+        darkThemeToggler: true,
+        sidebar: [
+            // A sidebar item, with child links
+            {
+                title: 'Guide Infomation',
+                link: '/'
+            },
+            {
+                title: 'Links',
+                children: [
+                    {
+                        title: 'GitHub',
+                        link: 'https://github.com/cal117/bsqmg'
+                    },
+                    {
+                        title: 'Beat Saber Modding Group',
+                        link: 'https://discord.gg/beatsabermods'
+                    },
+                    {
+                        title: 'QuestBoard Discord',
+                        link: 'https://discord.gg/vNjdgrzBKJ'
+                    }
+                ]
+            }
+        ],
+        versions: {
+            'Latest': {
+                link: '/'
+            }
+        }
+    })
+</script>
+</body>
+</html>
