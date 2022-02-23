@@ -36,6 +36,28 @@
             display: none;
         }
 
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: #575757 #ffffff;
+        }
+
+        /* Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #575757;
+            border-radius: 6px;
+            border: 0px solid #ffffff;
+        }
+
     </style>
 
 </head>
