@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>BSQ Modding Guide</title>
     <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
+    <link rel="icon" href="/favicon.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -66,6 +67,29 @@
             margin-top: 0.5rem !important;
         }
 
+        div.item {
+            vertical-align: top;
+            display: inline-block;
+            text-align: center;
+            width: 300px;
+        }
+        img.cover-img {
+            width: 300px;
+            height: auto;
+            background-color: grey;
+            max-width:300px;
+            max-height:150px;
+        }
+        .caption {
+            display: block;
+        }
+
+        .vertical-center {
+            display: inline-flex;
+            min-height: 100px;
+            align-items: center;
+        }
+
     </style>
 
 </head>
@@ -78,6 +102,7 @@
     }
 
     new Docute({
+        logo: "<span class='vertical-center'> <img width='auto' height='42px' style='border-radius: 50%; margin: 10px;' src='favicon.png' /> {{ $store.getters.config.title }}</span>",
         cssVariables(theme) {
             return theme === 'dark' ? {
                 pageBackground: "#111217",
@@ -86,7 +111,7 @@
         },
         target: '#docute',
         layout: 'wide',
-        highlight: ["cpp", "cmake", "powershell", "bash"],
+        highlight: ["cpp", "cmake", "powershell", "bash", "json"],
         theme: "dark",
         banner: `This guide is a work in progress. It may be incomplete.`,
         darkThemeToggler: true,
@@ -111,6 +136,14 @@
                     {
                         title: 'Hooking',
                         link: '/gs/hooking'
+                    },
+                    {
+                        title: 'Testing',
+                        link: '/gs/testing'
+                    },
+                    {
+                        title: 'Utilizing mod.json',
+                        link: '/gs/modjson.md'
                     }
                 ]
             },
