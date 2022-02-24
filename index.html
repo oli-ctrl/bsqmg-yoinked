@@ -58,6 +58,14 @@
             border: 0px solid #ffffff;
         }
 
+        .Content {
+            max-width: none !important;
+        }
+
+        .page-content h2 {
+            margin-top: 0.5rem !important;
+        }
+
     </style>
 
 </head>
@@ -70,6 +78,12 @@
     }
 
     new Docute({
+        cssVariables(theme) {
+            return theme === 'dark' ? {
+                pageBackground: "#111217",
+                accentColor: "#16c085"
+            } : {}
+        },
         target: '#docute',
         layout: 'wide',
         highlight: ["cpp", "cmake", "powershell", "bash"],
