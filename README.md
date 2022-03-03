@@ -6,7 +6,7 @@ The guide contains tutorials on:
 
 - Hooking
 - Configuration using `config-utils` (and alternative manual configuration)
-- UI using `questui` and **or** `QUCv2`
+- UI using `questui` and **or** `QUC`
 
 ## Explore
 
