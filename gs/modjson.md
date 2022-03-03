@@ -16,11 +16,11 @@ To add a cover image, simply create `cover.png` in the root of your project and 
 "coverImage": "cover.png"
 ```
 
-### Specification
+### Recommendations:
 
-- Recommended 1024x512 (BMBF will resize the image to be this size)
-- Can be png, jpg or gif.
-- Recommended being under 2mb to prevent load lag (larger `cover.png`, longer it'll take to show on BMBF)
+- 1024x512 (BMBF will resize the image to be this size)
+- File format either png, jpg or gif.
+- Under 2mb to prevent load lag (larger `cover.png`, longer it'll take to show on BMBF)
 
 ### Example Cover Images:
 
