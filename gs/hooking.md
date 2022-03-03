@@ -24,8 +24,12 @@ Firstly, create your hook using the `MAKE_HOOK_MATCH` macro:
 // Create a hook struct, named MainMenuUIHook.
 // Target "void MainMenuViewController::DidActivate" and takes the following arguments:
 // bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling
-//
-// MAKE_HOOK_MATCH also returns an pointer of the class instance (MainMenuViewController *self), which is useful.
+
+// General format: MAKE_HOOK_MATCH(HookName, method, method return type, method class pointer, arguments...) { 
+//  HookName(arguments...);
+//  // your code here 
+//}
+
 MAKE_HOOK_MATCH(MainMenuUIHook, &GlobalNamespace::MainMenuViewController::DidActivate, void, GlobalNamespace::MainMenuViewController *self, bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling) {
     // Run the original method before our code.
     // Note, you can run the original method after our code if you want to change arguments.
@@ -56,11 +60,3 @@ extern "C" void load() {
     getLogger().info("Installed all hooks!");
 }
 ```
-
- 
-## Disclaimer for people coming from PC modding.
-
-- Alternatives to hooking, for example, DI (Zenject) is near impossible to use due to the limitations of c++ (il2cpp needs generics to be compiled ahead of time, and the necessary generics for a lot of stuff we may want to inject won't exist).
-  However, alternatives such as [flamingo](https://github.com/sc2ad/flamingo) and [Google Fruit](https://github.com/google/fruit) are available.
-- Hooking is pretty much the equivalent of harmony patches.
-

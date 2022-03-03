@@ -36,7 +36,7 @@ qpm-rust restore
 
 If you're following this guide and want to migrate from old QPM to QPM Rust, you will need to fix the old cache to work with QPM Rust:
 
-This will fix cache paths and does not need to be re-ran in the future. Note: Old QPM will no longer work.
+This will fix cache paths for old dependencies (such as codegen before 1.17.0) and does not need to be re-ran in the future. Note: Old QPM will no longer work.
 
 ```powershell
 qpm-rust cache legacy-fix
@@ -72,11 +72,7 @@ README.md
 
 #### `src/main.cpp`
 
-`main.cpp` must **always** exist, it is required by the mod-loader to run the `setup()` and `load()` methods. Take a look inside of `main.cpp` for more information. Laurie has thankfully commented most of the code, which will greatly help you.
-
-#### `include/main.hpp`
-
-`main.hpp` is simply just a header file for `main.cpp`, nothing special. C++ basics.
+`main.cpp` contains the `setup()` and `load()` methods. These methods can exist anywhere as long as they are accessible by the mod-loader. Take a look inside of `main.cpp` for more information. Laurie has thankfully commented most of the code, which will greatly help you.
 
 #### `shared`
 
