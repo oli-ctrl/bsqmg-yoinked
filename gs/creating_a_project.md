@@ -84,7 +84,7 @@ The extern folder should be ignored (and on cases excluded), it contains depende
 
 ### Script Breakdown
 
-These scripts require powershell 7 (`pwsh`)
+It is recommended to run these scripts using Powershell Core (v7) - however, it is not required.
 
 #### `build.ps1`
 

@@ -2,7 +2,7 @@
 
 These tutorials/guides will teach you how to create a mod. It is not IDE dependent, you must configure your IDE appropriately (C++ tools for VSCode and CMake configured correctly for CLion ect.)
 
-This guide is based for windows, as 74% of developers are on windows - and that powershell scripts are used for development.
+This guide is based for windows, as 74% of developers are on Windows - and that powershell scripts are used for development.
 
 The getting started guides expects you have knowledge of the following:
 
