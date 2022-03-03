@@ -72,7 +72,7 @@ README.md
 
 #### `src/main.cpp`
 
-`main.cpp` contains the `setup()` and `load()` methods. These methods can exist anywhere as long as they are accessible by the mod-loader. Take a look inside of `main.cpp` for more information. Laurie has thankfully commented most of the code, which will greatly help you.
+`main.cpp` contains the `setup()` and `load()` methods. These methods can exist anywhere as long as they are accessible by the modloader. Take a look inside of `main.cpp` for more information. Laurie has thankfully commented most of the code, which will greatly help you.
 
 #### `shared`
 
@@ -80,7 +80,7 @@ The shared folder can be exposed by QPM to other mods and published to the QPM d
 
 #### `extern`
 
-The extern folder should be ignored (and on cases excluded), it contains dependencies, similarly to `node_modules (nodejs)` or `packages (.net core)`
+The extern folder should be ignored (and or in some cases excluded), it contains dependencies, similarly to `node_modules (nodejs)` or `packages (.net core)`
 
 ### Script Breakdown
 
@@ -102,10 +102,10 @@ Builds your mod, then generates a `.qmod` file that can be parsed by BMBF and or
 
 Usage: `copy.ps1`
 
-Builds your mod, then copies it to your quest and launches beat saber if your quest is plugged in.
+Builds your mod, then copies it to your quest and launches Beat Saber if your quest is plugged in.
 
 #### `start-logging.ps1`
 
 Usage: `start-logging.ps1 -Self`
 
-Usage of `-Self` is recommended, it allows you to read logs from only your mod. Starts logging using adb logcat for beat saber output.
+Usage of `-Self` is recommended, it allows you to read logs from only your mod. Starts logging using adb logcat for Beat Saber output.
