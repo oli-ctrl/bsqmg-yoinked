@@ -4,16 +4,10 @@
 
 You can test your mod without BMBF quickly using the `copy.ps1` command. This is recommended whilst developing. You should always test using a QMOD and BMBF if you're about to release your mod.
 
-The `copy.ps1` command allows you to copy your mod to your quest device and launch Beat Saber - you can also specify whether to start logging or not.
-
-### Example
-
-Recommended, copies your mod and opens beat saber, starts logging and filters for logs produced by only your mod and outputs the log into `latest.log`. 
-
-Exclude `-Self` if you want to view all logs omitted by Beat Saber
+What the `copy.ps1` command does, is copying the `libmodname.so` to the correct place, and launch your game for you. You can also specify while launching to log or not with the `-Log` argument and logging to only itself with the `-Log -Self` arguments. The following example is the recommended setup for `copy.ps1`.
 
 ```powershell
-copy.ps1 -Log -Self > latest.log
+copy.ps1 -Log -Self > _latest.log
 ```
 
 ## With BMBF
