@@ -14,7 +14,7 @@ To add a cover image, simply create `cover.png` at any point in your project  an
 
 ```json
 "coverImage": "cover.png"
-"or"
+// or
 "coverImage": "path/to/cover.png"
 ```
 

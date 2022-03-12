@@ -14,10 +14,10 @@ copy.ps1 -Log -Self > _latest.log
 
 Testing your mod with BMBF is useful to check if BMBF presents, or handles your mod.json correctly (copying files, etc.)
 
-You will need to [generate a QMOD file, using the `buildQMOD.ps1` command.](/gs/creating_a_project#buildqmodps1)
+You will need to [generate a QMOD file, using the `buildQMOD.ps1` command.](/getting-started/creating_a_project#buildqmodps1)
 
 You can then upload the generated QMOD file to BMBF, BMBF should install your mod - it should appear on the mods list.
 
-You can start logging using the [`start-logging.ps1 -Self > latest.log` command.](/gs/creating_a_project#start-loggingps1)
+You can start logging using the [`start-logging.ps1 -Self > latest.log` command.](/getting-started/creating_a_project#start-loggingps1)
 
 On the next page you can find out more info on mod.json, which has useful features that allow you to utilize BMBF.

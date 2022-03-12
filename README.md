@@ -10,7 +10,7 @@ The guide contains tutorials on:
 
 ## Explore
 
-Checkout the [Getting Started](/gs/) guide if you want to learn how to make mods.
+Checkout the [Getting Started](/getting-started/) guide if you want to learn how to make mods.
 
 Already made a mod? Want to utilise libraries such as `config-utils` and `quest-ui`? Checkout the [Further Modding](/fm/) guide for more information.
 

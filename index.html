@@ -1,239 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>BSQ Modding Guide</title>
     <link rel="stylesheet" href="https://unpkg.com/docute@4/dist/docute.css">
-    <link rel="icon" href="favicon.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .docute-banner {
-            background-color: orange;
-            color: black;
-            padding: 1rem;
-            border-radius: 5px;
-            border: 1px solid darkorange;
-            transition: transform .2s;
-
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        .docute-banner:hover {
-            transform: scale(1.05);
-        }
-
-        .LanguageSelector {
-            display: none;
-        }
-
-        /* ===== Scrollbar CSS ===== */
-        /* Firefox */
-        * {
-            scrollbar-width: auto;
-            scrollbar-color: #575757 #ffffff;
-        }
-
-        /* Chrome, Edge, and Safari */
-        *::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        *::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        *::-webkit-scrollbar-thumb {
-            background-color: #575757;
-            border-radius: 6px;
-            border: 0px solid #ffffff;
-        }
-
-        .Content {
-            max-width: none !important;
-        }
-
-        .page-content h2 {
-            margin-top: 0.5rem !important;
-        }
-
-        div.item {
-            vertical-align: top;
-            display: inline-block;
-            text-align: center;
-            width: 300px;
-        }
-        img.cover-img {
-            width: 300px;
-            height: auto;
-            background-color: grey;
-            max-width:300px;
-            max-height:150px;
-        }
-        .caption {
-            display: block;
-        }
-
-        .vertical-center {
-            display: inline-flex;
-            min-height: 100px;
-            align-items: center;
-        }
-
-        /*Loader */
-        .loader {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background: url('loader.svg') 50% 50% no-repeat #111217;
-        }
-
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="assets/img/favicon.png">
     <style id="scrollbar-manager"></style>
 </head>
 <body>
-<div class="loader"> </div>
-<div id="docute"></div>
-<script src="https://unpkg.com/docute@4/dist/docute.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
+    <div class="loader"></div>
+    <div id="docute"></div>
 
-    var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-    function preventDefault(e) {
-        e.preventDefault();
-    }
-
-    function preventDefaultForScrollKeys(e) {
-        if (keys[e.keyCode]) {
-            preventDefault(e);
-            return false;
-        }
-    }
-
-    // modern Chrome requires { passive: false } when adding event
-    var supportsPassive = false;
-    try {
-        window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-            get: function () { supportsPassive = true; }
-        }));
-    } catch(e) {}
-
-    var wheelOpt = supportsPassive ? { passive: false } : false;
-    var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-    var style = document.getElementById("scrollbar-manager");
-
-    // call this to Disable
-    function disableScroll() {
-        style.innerHTML = `body::-webkit-scrollbar {display: none;}`;
-        window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-        window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-        window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-        window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-    }
-
-    // call this to Enable
-    function enableScroll() {
-        style.innerHTML = ``;
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-        window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-        window.removeEventListener('touchmove', preventDefault, wheelOpt);
-        window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-    }
-
-    function hideLoader()
-    {
-        enableScroll();
-        $(".loader").fadeOut(300, function() { $(this).remove(); });
-    }
-
-    $(window).on('load', function(){
-        setTimeout(hideLoader, 2000); //wait for page load PLUS two seconds.
-    });
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('js/sw.js')
-    }
-
-    new Docute({
-        logo: "<span class='vertical-center'> <img width='auto' height='42px' style='border-radius: 50%; margin: 10px;' src='favicon.png' /> {{ $store.getters.config.title }}</span>",
-        cssVariables(theme) {
-            return theme === 'dark' ? {
-                pageBackground: "#111217",
-                accentColor: "#16c085"
-            } : {}
-        },
-        target: '#docute',
-        layout: 'wide',
-        highlight: ["cpp", "cmake", "powershell", "bash", "json"],
-        theme: "dark",
-        banner: `This guide is a work in progress. It may be incomplete.`,
-        darkThemeToggler: true,
-        sidebar: [
-            // A sidebar item, with child links
-            {
-                title: 'Guide Infomation',
-                link: 'README.md'
+    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        new Docute({
+            logo: `
+    <span class='vertical-center'>
+      <img width='auto' height='42px' style='border-radius: 50%; margin: 10px;' src='assets/img/favicon.png'  alt="logo"/>
+      {{ $store.getters.config.title }}
+    </span>`,
+            cssVariables(theme) {
+                return theme === 'dark' ? {
+                    pageBackground: "#111217",
+                    accentColor: "#16c085"
+                } : {}
             },
-            {
-                title: 'Getting Started',
-                // link: '/gs/',
-                children: [
-                    {
-                        title: 'Information',
-                        link: "/gs/"
-                    },
-                    {
-                        title: 'Creating a project',
-                        link: '/gs/creating_a_project'
-                    },
-                    {
-                        title: 'Hooking',
-                        link: '/gs/hooking'
-                    },
-                    {
-                        title: 'Testing',
-                        link: '/gs/testing'
-                    },
-                    {
-                        title: 'Utilizing mod.json',
-                        link: '/gs/modjson.md'
-                    }
-                ]
-            },
-            {
-                title: 'Links',
-                children: [
-                    {
-                        title: 'GitHub',
-                        link: 'https://github.com/cal117/bsqmg'
-                    },
-                    {
-                        title: 'Beat Saber Modding Group',
-                        link: 'https://discord.gg/beatsabermods'
-                    },
-                    {
-                        title: 'QuestBoard Discord',
-                        link: 'https://discord.gg/vNjdgrzBKJ'
-                    }
-                ]
-            }
-        ]
-    })
-</script>
+            target: '#docute',
+            layout: 'wide',
+            highlight: ["cpp", "cmake", "powershell", "bash", "json"],
+            theme: "dark",
+            banner: `This guide is a work in progress. It may be incomplete.`,
+            darkThemeToggler: true,
+            sidebar: [
+                // A sidebar item, with child links
+                {
+                    title: 'Guide Infomation',
+                    link: 'README.md'
+                },
+                {
+                    title: 'Getting Started',
+                    // link: '/getting-started/',
+                    children: [
+                        {
+                            title: 'Information',
+                            link: "/getting-started/"
+                        },
+                        {
+                            title: 'Creating a project',
+                            link: '/getting-started/creating_a_project'
+                        },
+                        {
+                            title: 'Hooking',
+                            link: '/getting-started/hooking'
+                        },
+                        {
+                            title: 'Testing',
+                            link: '/getting-started/testing'
+                        },
+                        {
+                            title: 'Utilizing mod.json',
+                            link: '/getting-started/modjson.md'
+                        }
+                    ]
+                },
+                {
+                    title: 'Links',
+                    children: [
+                        {
+                            title: 'GitHub',
+                            link: 'https://github.com/cal117/bsqmg'
+                        },
+                        {
+                            title: 'Beat Saber Modding Group',
+                            link: 'https://discord.gg/beatsabermods'
+                        },
+                        {
+                            title: 'QuestBoard Discord',
+                            link: 'https://discord.gg/vNjdgrzBKJ'
+                        }
+                    ]
+                }
+            ]
+        })
+    </script>
 </body>
 </html>
