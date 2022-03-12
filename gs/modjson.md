@@ -39,10 +39,6 @@ To add a cover image, simply create `cover.png` at any point in your project  an
                 <img class="cover-img" src="https://raw.githubusercontent.com/Royston1999/SliceDetails-Quest/main/Cover.jpg" alt="noodle"/>
                 <span class="caption">Slice Details Quest</span>
     </div>
-    <div class="item">
-                <img class"cover-img" src="https://raw.githubusercontent.com/raineio/QClaws/master/cover/cover.png" alt="QClaws" />
-                <span>QClaws</span>
-    </div>
 </div>
 
 ## File Copies
