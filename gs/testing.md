@@ -13,7 +13,7 @@ Recommended, copies your mod and opens beat saber, starts logging and filters fo
 Exclude `-Self` if you want to view all logs omitted by Beat Saber
 
 ```powershell
-copy.ps1 -Log -Self > latest.log
+copy.ps1 -Log -Self > _latest.log
 ```
 
 ## With BMBF
