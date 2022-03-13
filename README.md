@@ -13,8 +13,7 @@ The guide contains tutorials on:
 
 Checkout the [Getting Started](/getting-started/) guide if you want to learn how to make mods.
 
-Already made a mod? Want to utilise libraries such as `config-utils` and `quest-ui`? Checkout
-the [Further Modding](/further-modding/) guide for more information.
+The sidebar contains all the guides you can follow. Introduction pages contain infomation on prerequisites and other useful information.
 
 ## Contributing
 
