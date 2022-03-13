@@ -37,6 +37,8 @@ custom_types::Helpers::Coroutine counterCoroutine() {
 
 `co_return` is used to return a `Coroutine`, C# automatically handles this during compilation, but c++ does not.
 
+You can also use `co_return` to exit a coroutine early, just like `return`.
+
 Using normal `return` in a coroutine will not work.
 
 ## Using the Coroutine
