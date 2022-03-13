@@ -45,7 +45,7 @@ you want to add is suitable and is correctly formatted.
 These people have contributed to the guide:
 
 <a href="https://github.com/cal117/bsqmg/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cal117/bsqmg"  alt="contributors"/>
+  <img class="NO-CACHE" src="https://contrib.rocks/image?repo=cal117/bsqmg" alt="contributors"/>
 </a>
 
 
