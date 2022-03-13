@@ -13,7 +13,8 @@ The guide contains tutorials on:
 
 Checkout the [Getting Started](/getting-started/) guide if you want to learn how to make mods.
 
-The sidebar contains all the guides you can follow. Introduction pages contain infomation on prerequisites and other useful information.
+The sidebar contains all the guides you can follow. Introduction pages contain infomation on prerequisites and other
+useful information.
 
 ## Contributing
 
@@ -45,8 +46,12 @@ you want to add is suitable and is correctly formatted.
 These people have contributed to the guide:
 
 <a href="https://github.com/cal117/bsqmg/graphs/contributors">
-  <img class="NO-CACHE" src="https://contrib.rocks/image?repo=cal117/bsqmg" alt="contributors"/>
+  <img id="contributors-im" src="https://contrib.rocks/image?repo=cal117/bsqmg" alt="contributors"/>
 </a>
 
+<script>
+    const num = Math.round(Math.random() * 10000000);
+    document.getElementById("contributors-im").src += `&${num}`;
+</script>
 
 
