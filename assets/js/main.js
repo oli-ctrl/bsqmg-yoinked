@@ -1,9 +1,10 @@
-
-// Disable caching.
-$(document).ready(function ()
-    {           
+window.plugins = {};
+window.plugins.cachables = {
+    name: 'cachables',
+    onContentUpdated(v) {
         $('.NO-CACHE').attr('src',function () { return $(this).attr('src') + "&a=" + Math.random() });
-    });
+    }
+};
 
 window.onload = () => {
     const queryString = window.location.search;
