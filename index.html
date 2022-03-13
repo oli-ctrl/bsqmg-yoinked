@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>BSQ Modding Guide</title>
+    <meta name="description" content="A guide for developing mods for beat saber on oculus quest devices.">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://bsqmg.cal117.me/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Beat Saber Quest Modding Guide">
+    <meta property="og:description" content="A guide for developing mods for beat saber on oculus quest devices.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/cal117/bsqmg/master/assets/img/favicon.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="">
+    <meta property="twitter:url" content="https://bsqmg.cal117.me/">
+    <meta name="twitter:title" content="Beat Saber Quest Modding Guide">
+    <meta name="twitter:description" content="A guide for developing mods for beat saber on oculus quest devices.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/cal117/bsqmg/master/assets/img/favicon.png">
     <link href="https://unpkg.com/docute@4/dist/docute.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/img/favicon.png" rel="icon">
     <style id="scrollbar-manager"></style>
-</head>
-<body>
-<div class="loader"></div>
-<div id="docute"></div>
-
-<script src="https://unpkg.com/docute@4/dist/docute.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-    new Docute({
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div id="docute"></div>
+    <script src="https://unpkg.com/docute@4/dist/docute.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      new Docute({
         logo: `
-    <span class='vertical-center'>
-      <img width='auto' height='42px' style='border-radius: 50%; margin: 10px;' src='assets/img/favicon.png'  alt="logo"/>
+    
+																				<span class='vertical-center'>
+																					<img width='auto' height='42px' style='border-radius: 50%; margin: 10px;' src='assets/img/favicon.png'  alt="logo"/>
       {{ $store.getters.config.title }}
-    </span>`,
+    
+																				</span>`,
         cssVariables(theme) {
-            return theme === 'dark' ? {
-                pageBackground: "#111217",
-                accentColor: "#16c085"
-            } : {}
+          return theme === 'dark' ? {
+            pageBackground: "#111217",
+            accentColor: "#16c085"
+          } : {}
         },
         target: '#docute',
         layout: 'wide',
@@ -36,77 +51,59 @@
         // banner: `You can support the creation of this guide here.`,
         darkThemeToggler: true,
         sidebar: [
-            // A sidebar item, with child links
-            {
-                title: 'Guide Infomation',
-                link: 'README.md'
-            },
-            {
-                title: 'Getting Started',
-                // link: '/getting-started/',
-                children: [
-                    {
-                        title: 'Information',
-                        link: "/getting-started/"
-                    },
-                    {
-                        title: 'Creating a project',
-                        link: '/getting-started/creating_a_project'
-                    },
-                    {
-                        title: 'Hooking',
-                        link: '/getting-started/hooking'
-                    },
-                    {
-                        title: 'Testing',
-                        link: '/getting-started/testing'
-                    },
-                    {
-                        title: 'Utilizing mod.json',
-                        link: '/getting-started/modjson.md'
-                    }
-                ]
-            },
-            {
-                title: 'Configuration',
-                children: [
-                    {
-                        title: 'Information',
-                        link: '/configuration/'
-                    },
-                    {
-                        title: 'Declaring Configuration',
-                        link: '/configuration/declaring_config.md'
-                    },
-                    {
-                        title: 'Defining Configuration',
-                        link: '/configuration/defining_config.md'
-                    },
-                    {
-                        title: 'Using Configuration',
-                        link: '/configuration/using_config.md'
-                    },
-                ]
-            },
-            {
-                title: 'Links',
-                children: [
-                    {
-                        title: 'GitHub',
-                        link: 'https://github.com/cal117/bsqmg'
-                    },
-                    {
-                        title: 'Beat Saber Modding Group',
-                        link: 'https://discord.gg/beatsabermods'
-                    },
-                    {
-                        title: 'QuestBoard Discord',
-                        link: 'https://discord.gg/vNjdgrzBKJ'
-                    }
-                ]
-            }
+          // A sidebar item, with child links
+          {
+            title: 'Guide Infomation',
+            link: 'README.md'
+          }, {
+            title: 'Getting Started',
+            // link: '/getting-started/',
+            children: [{
+              title: 'Information',
+              link: "/getting-started/"
+            }, {
+              title: 'Creating a project',
+              link: '/getting-started/creating_a_project'
+            }, {
+              title: 'Hooking',
+              link: '/getting-started/hooking'
+            }, {
+              title: 'Testing',
+              link: '/getting-started/testing'
+            }, {
+              title: 'Utilizing mod.json',
+              link: '/getting-started/modjson.md'
+            }]
+          }, {
+            title: 'Configuration',
+            children: [{
+              title: 'Information',
+              link: '/configuration/'
+            }, {
+              title: 'Declaring Configuration',
+              link: '/configuration/declaring_config.md'
+            }, {
+              title: 'Defining Configuration',
+              link: '/configuration/defining_config.md'
+            }, {
+              title: 'Using Configuration',
+              link: '/configuration/using_config.md'
+            }, ]
+          }, {
+            title: 'Links',
+            children: [{
+              title: 'GitHub',
+              link: 'https://github.com/cal117/bsqmg'
+            }, {
+              title: 'Beat Saber Modding Group',
+              link: 'https://discord.gg/beatsabermods'
+            }, {
+              title: 'QuestBoard Discord',
+              link: 'https://discord.gg/vNjdgrzBKJ'
+            }]
+          }
         ]
-    })
-</script>
-</body>
+      })
+    </script>
+  </body>
 </html>
