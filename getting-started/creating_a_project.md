@@ -14,12 +14,12 @@ Example for each placeholder:
 
 ## Updating dependencies in qpm.json and adding codegen
 
-It is recommended you update your `beatsaber-hook` to a version that is suited best for the current game version (1.19.1) -
+It is recommended you update your `beatsaber-hook` to a version that is suited best for the current game version (1.20.0) -
 `codegen` is a library allows you to interface with the game's code.
 
 ```powershell
 qpm-rust dependency add beatsaber-hook -v >=3.6.7
-qpm-rust dependency add codegen -v 0.20.0
+qpm-rust dependency add codegen -v ^0.21.0
 ```
 
 ## Restoring Dependencies
