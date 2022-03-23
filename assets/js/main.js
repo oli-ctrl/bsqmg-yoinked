@@ -67,7 +67,7 @@ window.onload = () => {
             });
         }
 
-        setTimeout(hideLoader, 2000); //wait for page load PLUS two seconds.
+        setTimeout(hideLoader, 500);
     } else {
         $(".loader").remove();
     }
