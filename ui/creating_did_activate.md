@@ -4,6 +4,9 @@
 
 Take a look at this example:
 
+- You should only create your components on first activation to prevent duplication.
+- You can utilize containers (such as Scrollable, HorizontalLayout and VerticalLayout) to manipulate the locations of components.
+
 ```cpp
 void DidActivate(HMUI::ViewController* self, bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling) {
     // Create our UI elements only when shown for the first time.
@@ -16,3 +19,7 @@ void DidActivate(HMUI::ViewController* self, bool firstActivation, bool addedToH
     }
 }
 ```
+
+There are too many methods to document in this guide, you should refer to documentation and comments inside of `BeatSaberUI.hpp`
+
+For `questui` to use your `DidActivate` you will need to register it using the `questui::Register` class.
