@@ -19,7 +19,7 @@ It is recommended you update your `beatsaber-hook` to a version that is suited b
 
 ```powershell
 qpm-rust dependency add beatsaber-hook -v ^3.6.7
-qpm-rust dependency add codegen -v ^0.21.0
+qpm-rust dependency add codegen -v ^0.22.0
 ```
 
 ## Restoring Dependencies
