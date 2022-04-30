@@ -3,7 +3,7 @@
 To begin, open a terminal and run the command:
 
 ```powershell
-tmplytr use Lauriethefish/quest-mod-template
+templatr use Lauriethefish/quest-mod-template
 ```
 
 This will guide you through the process of creating a mod from Laurie's quest mod template.
@@ -18,7 +18,7 @@ It is recommended you update your `beatsaber-hook` to a version that is suited b
 `codegen` is a library allows you to interface with the game's code.
 
 ```powershell
-qpm-rust dependency add beatsaber-hook -v ^3.7.4
+qpm-rust dependency add beatsaber-hook -v ^3.8.1
 qpm-rust dependency add codegen -v ^0.22.0
 ```
 
