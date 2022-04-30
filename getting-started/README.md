@@ -32,7 +32,7 @@ Linux/MacOS users will need to run `chmod +x templatr` before using `templatr`.
 To check if `templatr` was installed, run the help command.
 
 ```powershell
-tmplytr --help
+templatr --help
 ```
 
 ### Android NDK
