@@ -23,18 +23,16 @@ To follow this guide, you will need to download and install the following prereq
 
 ### Templatr
 
-Templatr requires the current nodejs - [you can get it here.](https://nodejs.org/en/download/current/)
+You can download the [latest `templatr` release here.](https://github.com/cal117/templatr/releases/latest)
 
-To install templatr, run the following command:
+Extract the executable and add to path.
 
-```powershell
-npm install -g tmplytr
-```
+Linux/MacOS users will need to run `chmod +x templatr` before using `templatr`.
 
-Reload your terminal and run the following to command to confirm templatr is installed:
+To check if `templatr` was installed, run the help command.
 
 ```powershell
-tmplytr
+tmplytr --help
 ```
 
 ### Android NDK
